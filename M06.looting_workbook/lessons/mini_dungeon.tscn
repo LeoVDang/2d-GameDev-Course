@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cit7gnkdckyux"]
+[gd_scene load_steps=12 format=3 uid="uid://cit7gnkdckyux"]
 
 [ext_resource type="Texture2D" uid="uid://114x1a0rmx4l" path="res://assets/dungeon/smooth_dungeon_tileset.png" id="1_sym7n"]
 [ext_resource type="Texture2D" uid="uid://cae527caaj50v" path="res://assets/dungeon/shadow_map.png" id="2_jthdw"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1rgncfgjxefj" path="res://assets/dungeon/pillar.png" id="4_gq228"]
 [ext_resource type="Texture2D" uid="uid://l0y1k1obencd" path="res://assets/dungeon/spider_web.png" id="5_ywba7"]
 [ext_resource type="PackedScene" uid="uid://eundh35r605v" path="res://assets/torch/torch.tscn" id="6_fokey"]
+[ext_resource type="PackedScene" uid="uid://dw060u7kdkn3c" path="res://lessons/chest.tscn" id="7_ba3ji"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6s4s5"]
 texture = ExtResource("1_sym7n")
@@ -280,6 +281,7 @@ layer_3/name = "walls"
 layer_3/tile_data = PackedInt32Array(262147, 1, 3, 327683, 1, 4, 262148, 131073, 3, 327684, 131073, 4, 65541, 65537, 3, 131077, 65537, 4, 65542, 65537, 3, 131078, 65537, 4, 65543, 65537, 3, 131079, 65537, 4, 65544, 65537, 3, 131080, 65537, 4, 65545, 65537, 3, 131081, 65537, 4, 65546, 65537, 3, 131082, 65537, 4, 65547, 65537, 3, 131083, 65537, 4, 65548, 65537, 3, 131084, 65537, 4, 196621, 1, 3, 196622, 65537, 3, 196623, 131073, 3, 262159, 131073, 4, 262158, 65537, 4, 262157, 1, 4, 131074, 1, 4, 196611, 1, 2, 196612, 131073, 2, -65534, 1, 0, -65533, 65537, 0, -65532, 65537, 0, -65531, 65537, 0, -65530, 65537, 0, -65529, 65537, 0, -65528, 65537, 0, -65527, 65537, 0, -65526, 196609, 0, -65525, 65537, 1, -65524, 262145, 0, -65523, 65537, 0, -65522, 65537, 0, -65521, 131073, 0, 131087, 131073, 2, 65549, 196609, 2, 131085, 1, 2, 65550, 65537, 1, 131086, 65537, 2, 15, 131073, 1, 65551, 131073, 1, 5, 65537, 2, 6, 65537, 2, 7, 65537, 2, 8, 65537, 2, 9, 65537, 2, 10, 65537, 2, 11, 65537, 2, 12, 65537, 2, 13, 196609, 1, 4, 262145, 1, 131076, 131073, 1, 65540, 262145, 2, 14, 65537, 1, 65538, 1, 3, 2, 1, 2, 3, 196609, 1, 65539, 196609, 2, 131075, 1, 1, -131062, 1, 0, -131061, 65537, 0, -131060, 131073, 0)
 layer_4/name = "walls_top"
 layer_4/tile_data = PackedInt32Array(65547, 262145, 4, 131083, 262145, 5, 65542, 262145, 4, 131078, 262145, 5, 65538, 196609, 4, 196623, 196609, 4, 196622, 262145, 4, 262158, 262145, 5, 196621, 196609, 4, 3, 262147, 0, 2, 3, 2, 65551, 131075, 1, 131087, 131075, 2, 131086, 65539, 2, 65550, 262147, 2, 65549, 3, 1, 131085, 3, 2, 15, 131075, 1, 14, 262147, 1, -131061, 65539, 0, -65524, 131075, 1, -131060, 131075, 0, 13, 3, 0, -65521, 131075, 0, -65522, 3, 0, -65533, 65539, 0, -65534, 3, 0, 131076, 131075, 2, 65540, 131075, 1, 131075, 3, 2, 65539, 3, 1, 4, 131075, 1, -65532, 131075, 0, 12, 131075, 2, 11, 3, 2, -65525, 262147, 0, -131062, 3, 0, -65526, 3, 2)
+metadata/_edit_lock_ = true
 
 [node name="Pillar" type="Sprite2D" parent="Background"]
 position = Vector2(192, 480)
@@ -321,3 +323,12 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.977546, 0.842183, 0.960847, 1)
 metadata/_edit_lock_ = true
+
+[node name="Chest" parent="." instance=ExtResource("7_ba3ji")]
+position = Vector2(606, 348)
+
+[node name="Chest2" parent="." instance=ExtResource("7_ba3ji")]
+position = Vector2(796, 426)
+
+[node name="Chest3" parent="." instance=ExtResource("7_ba3ji")]
+position = Vector2(426, 267)

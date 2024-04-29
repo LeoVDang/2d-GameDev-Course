@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dw060u7kdkn3c"]
+[gd_scene load_steps=8 format=3 uid="uid://dw060u7kdkn3c"]
 
+[ext_resource type="Script" path="res://lessons/chest.gd" id="1_hfqss"]
 [ext_resource type="Texture2D" uid="uid://c3hwsm5ugp8qw" path="res://lessons/chest/bottom.png" id="1_ugdi8"]
 [ext_resource type="Shader" path="res://lessons/chest/group_outline.gdshader" id="1_yiij4"]
 [ext_resource type="Texture2D" uid="uid://bnem1cahhoxdk" path="res://lessons/chest/top.png" id="2_dbcpt"]
@@ -9,12 +10,14 @@
 size = Vector2(96, 81)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fkuba"]
+resource_local_to_scene = true
 shader = ExtResource("1_yiij4")
 shader_parameter/line_color = Color(0, 0, 0, 1)
-shader_parameter/line_thickness = 37.0
+shader_parameter/line_thickness = 10.0
 shader_parameter/viewport_scale = Vector2(1, 1)
 
 [node name="Chest" type="Area2D"]
+script = ExtResource("1_hfqss")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -25,13 +28,19 @@ shape = SubResource("RectangleShape2D_74gyy")
 material = SubResource("ShaderMaterial_fkuba")
 
 [node name="Bottom" type="Sprite2D" parent="CanvasGroup"]
+self_modulate = Color(0.973535, 0.973535, 0.973535, 1)
 position = Vector2(4, 4)
 texture = ExtResource("1_ugdi8")
 
 [node name="Top" type="Sprite2D" parent="CanvasGroup"]
+self_modulate = Color(0.973535, 0.973535, 0.973535, 1)
 position = Vector2(4, -12)
 texture = ExtResource("2_dbcpt")
 
 [node name="Lock" type="Sprite2D" parent="CanvasGroup"]
+self_modulate = Color(0.973535, 0.973535, 0.973535, 1)
 position = Vector2(4, 11)
 texture = ExtResource("3_igd4s")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
