@@ -4,10 +4,22 @@ extends Area2D
 
 
 func _input_event(viewport: Node, event: InputEvent, shape_index: int):
-	# Complete this boolean expression to check if the input event is a left-mouse click.
 	var event_is_mouse_click: bool = (
-		false
+		event is InputEventMouseButton and
+		event.button_index == MOUSE_BUTTON_LEFT and 
+		event.is_pressed()
 	)
-
+	
 	if event_is_mouse_click:
-		pass
+		open()
+
+var is_open := false
+
+func open() -> void:
+	if is_open:
+		return
+	
+	input_pickable = false
+	animation_player.play("open")
+
+
