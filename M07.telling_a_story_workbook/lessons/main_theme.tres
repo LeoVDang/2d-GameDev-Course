@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://2purl3kj6xdj"]
+
+[ext_resource type="StyleBox" uid="uid://drid0v8b08udr" path="res://lessons/button_black.tres" id="1_o7bm6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa5m4"]
+content_margin_left = 48.0
+content_margin_top = 32.0
+content_margin_right = 48.0
+content_margin_bottom = 32.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[resource]
+default_font_size = 48
+Button/styles/disabled = ExtResource("1_o7bm6")
+Button/styles/focus = ExtResource("1_o7bm6")
+Button/styles/hover = ExtResource("1_o7bm6")
+Button/styles/normal = ExtResource("1_o7bm6")
+Button/styles/pressed = ExtResource("1_o7bm6")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_oa5m4")
