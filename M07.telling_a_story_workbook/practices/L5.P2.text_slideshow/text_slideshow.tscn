@@ -1,18 +1,19 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://ghvonxhmt7qp"]
 
-[ext_resource type="Material" path="res://practices/L6.P1.poetry/assets/practice_background_material.tres" id="1_2xoww"]
-[ext_resource type="Theme" path="res://practices/L5.P2.text_slideshow/assets/practice_exercises_theme.tres" id="2_jlxg5"]
-[ext_resource type="Script" path="res://practices/L5.P2.text_slideshow/text_slideshow.gd" id="3_oj7y3"]
+[ext_resource type="Material" uid="uid://blciib2n6bpvf" path="res://practices/L5.P2.text_slideshow/assets/practice_background_material.tres" id="1_yg6g5"]
+[ext_resource type="Theme" uid="uid://bnmph65g7q2l3" path="res://practices/L5.P2.text_slideshow/assets/practice_exercises_theme.tres" id="2_i1yy6"]
+[ext_resource type="Script" path="res://practices/L5.P2.text_slideshow/text_slideshow.gd" id="3_u0yos"]
 
 [node name="TextSlideshow" type="ColorRect"]
-material = ExtResource("1_2xoww")
+material = ExtResource("1_yg6g5")
 custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_jlxg5")
-script = ExtResource("3_oj7y3")
+theme = ExtResource("2_i1yy6")
+script = ExtResource("3_u0yos")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
