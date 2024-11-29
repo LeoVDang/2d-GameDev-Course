@@ -79,7 +79,6 @@ func show_text() -> void:
 	rich_text_label.text = current_item["text"]
 	expression_texture_rect.texture = current_item["expression"]
 	body.texture = current_item["character"]
-	
 	rich_text_label.visible_ratio = 0.0
 	var tween := create_tween()
 	var text_appearing_duration: float = current_item["text"].length()/ 30.0
@@ -89,6 +88,10 @@ func show_text() -> void:
 	var sound_start_position := randf() * sound_max_length
 	audio_stream_player.play(sound_start_position)
 	slide_in()
+	next_button.disabled = true
+	tween.finished.connect(func()-> void:
+			next_button.disabled = false
+	)
 
 func advance() -> void:
 	current_item_index += 1
