@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SlideShowEntry" load_steps=4 format=3 uid="uid://s3ll2w5tl2io"]
+
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="1_t7hr5"]
+[ext_resource type="Script" path="res://lessons/slideshow_entry.gd" id="1_ykukb"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="2_4dody"]
+
+[resource]
+script = ExtResource("1_ykukb")
+expression = ExtResource("2_4dody")
+character = ExtResource("1_t7hr5")
+text = ""
